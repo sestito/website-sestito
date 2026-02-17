@@ -39,7 +39,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: setito/setito.github.io  # Your live site repo
+          external_repository: sestito/sestito.github.io  # Your live site repo
           publish_branch: main
           publish_dir: ./_site
           cname: ""  # Add your custom domain here if you have one
