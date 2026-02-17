@@ -1,7 +1,7 @@
 @import "types/bootstrap_overwrite";
 
-// Import Bootstrap from the gem - the gem provides this path
-@import "bootstrap/scss/bootstrap";
+// Bootstrap is now loaded via CDN in the HTML layout
+// No need to import it here anymore
 
 @import "types/nav";
 @import "types/publications";
