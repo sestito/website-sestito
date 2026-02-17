@@ -1,0 +1,54 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches:
+      - main  # Triggers on pushes to main (production)
+      - dev   # Triggers on pushes to dev (preview)
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      # Step 2: Set up Ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true  # Automatically runs bundle install and caches gems
+      
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: bundle install
+      
+      # Step 4: Build the Jekyll site
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      
+      # Step 5: Deploy to production (setito.github.io) if on main branch
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: setito/setito.github.io  # Your live site repo
+          publish_branch: main
+          publish_dir: ./_site
+          cname: ""  # Add your custom domain here if you have one
+      
+      # Step 6: Deploy to preview if on dev branch
+      - name: Deploy to Preview
+        if: github.ref == 'refs/heads/dev'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site

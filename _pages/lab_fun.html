@@ -1,0 +1,63 @@
+---
+layout: nav_default
+title: 
+permalink: lab_fun
+---
+
+<section class="educational_resources">
+  <div class="container py-5">
+    <div class="row">
+      <div class="mx-auto">
+        <h1 class="section-heading text-center">Lab Fun</h1>
+ 
+      </div>
+    </div>
+  </div>
+
+  <div class="b-divider"></div>
+
+  {% for er in site.lab_fun %}
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row {% if er.imgleft != nil %}flex-lg-row-reverse{% else %}flex-lg-row{% endif %} align-items-center g-5 py-5">
+
+
+      <div class="col-lg-{% if er.img != nil %}8{% else %}10{% endif %}">
+        {{ er.content | markdownify }}
+
+      </div>
+
+      {% if er.img != nil %}
+      <div class="col-8 col-sm-6 col-lg-4">
+        <img src="{{ er.img }}" class="d-block mx-lg-auto img-fluid" alt {% if er.imgwidth != nil %}width="{{er.imgwidth}}"{% endif %} loading="lazy">
+      </div>
+      {% endif %}
+    </div>  
+  </div>
+
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    {% for picture in er.pictures %}
+  
+      <div class="col">
+  
+        <!-- Image of person -->
+        <a>
+          <img src="/assets/images/lab_fun/{{ er.picturefolder }}/{{ picture }}" class="card-img" alt>
+        </a>
+  
+  
+        <!-- Name -->
+        <!-- <div class="name">{{person.name}}</div> -->
+  
+      </div>
+  
+
+    {% endfor %}
+    </div>  
+
+  {% if er.borderafter != nil %}
+  <div class="b-divider"></div>
+  {% endif %}
+
+  {% endfor %}
+</section>

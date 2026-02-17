@@ -1,0 +1,17 @@
+---
+layout: nav_home
+title: 
+permalink: /
+---
+
+{% for section in site.data.homepages %}
+{% if section.id != nil %}
+<div id="{{ section.id }}"></div>
+{% endif %}
+
+
+{% include_relative /home/{{ section.file }} %}
+
+{% if section.end == nil %}<div class="b-divider"></div>{% endif %}
+
+{% endfor %}

@@ -1,0 +1,175 @@
+- title: Structural descriptor and surrogate modeling for design of biodegradable scaffolds 
+  type: Article
+  img: 2024_Structural_Descriptor.png
+  description:
+  doi: doi.org/10.1016/j.jmbbm.2024.106415
+  year: 2024
+  pdf: 
+  pdf_preprint: 2024_Structural_Descriptors
+  bibtex: |
+      @article{SESTITO2024106415,
+      title = {Structural descriptor and surrogate modeling for design of biodegradable scaffolds},
+      journal = {Journal of the Mechanical Behavior of Biomedical Materials},
+      volume = {152},
+      pages = {106415},
+      year = {2024},
+      issn = {1751-6161},
+      doi = {https://doi.org/10.1016/j.jmbbm.2024.106415},
+      url = {https://www.sciencedirect.com/science/article/pii/S175161612400047X},
+      author = {Jesse M. Sestito and Tequila A.L. Harris and Yan Wang},
+      keywords = {Structure-property relationship, Structural descriptor, Biodegradable scaffold, Kinetic Monte Carlo, Regenerative medicine},
+      abstract = {Biodegradable scaffolds are important to regenerative medicine in that they provide an amicable environment for tissue regrowth. However, establishing structure-property (SP) relationships for scaffold design is challenging due to the complexity of the three-dimensional porous scaffold geometry. The complexity requires high-dimensional geometric descriptors. The training of such a SP surrogate model will need a large amount of experimental or simulation data. In this work, a schema of constructing SP relationship surrogates is developed to predict the degraded mechanical properties from the initial scaffold geometry. A new structure descriptor, the extended surfacelet transform (EST), is proposed to capture important details of pores associated with the degradation of scaffolds. The efficiency is further enhanced with principal component analysis to reduce the high-dimensional EST data into a low-dimensional representation. The schema also includes a kinetic Monte Carlo biodegradation model to simulate the biodegradation of polymer scaffolds and to generate the training data for the formation of SP relationships. The schema is demonstrated with the design of polycaprolactone biodegradable scaffolds by connecting the initial scaffold geometry to the degraded compressive modulus.}
+      }
+
+- title: Molecular dynamics simulations of cascade events in AlN
+  type: Article
+  img: 
+  description:
+  doi: doi.org/10.1016/j.rinma.2023.100383
+  year: 2023
+  #pdf: https://www.sciencedirect.com/science/article/pii/S2590048X23000213/pdfft?md5=51f0d5cd96bf2782b4917e69bc044e91&pid=1-s2.0-S2590048X23000213-main.pdf
+  pdf_preprint: 2023_Cascade_AlN
+  bibtex: |
+      @article{KEMPNER2023100383,
+      title = {Molecular dynamics simulations of cascade events in AlN},
+      journal = {Results in Materials},
+      pages = {100383},
+      year = {2023},
+      issn = {2590-048X},
+      doi = {https://doi.org/10.1016/j.rinma.2023.100383},
+      url = {https://www.sciencedirect.com/science/article/pii/S2590048X23000213},
+      author = {Michaela Kempner and Jesse M. Sestito and Yan Wang and Eva Zarkadoula},
+      keywords = {Molecular dynamics, Aluminum nitride, Radiation damage, Cascades},
+      abstract = {The radiation tolerance and the ability to retain its piezoelectric response make aluminum nitride (AlN) a good candidate for emerging sensing technologies in nuclear reactor environments. Furthermore, it has been shown that doping the ceramic with additional metals can further improve the piezoelectric response. Fundamental understanding of the response of AlN to radiation is important for ultimately improving the material's properties. In this paper, we use molecular dynamics and a recently developed interatomic potential fitted to defect energies to investigate low energy collision cascades in AlN. We additionally investigate the electronic stopping effect in the damage production for 20 keV Al ions. Our results show that for all energies the number of Al surviving defects is larger than that of N defects. Additionally, we find that even though the ballistic energy loss is the dominating mechanism, it is important to take into account the electronic stopping in order not to overestimate the number of defects.}
+      }
+
+- title: Computational Analysis and Optimization of Geometric Parameters for Fibrous Scaffold Design
+  type: Article
+  img: 2022_BioScaffolds.jpeg
+  description:
+  doi: 10.1021/acsomega.2c05234
+  year: 2022
+  #pdf: https://pubs.acs.org/doi/pdf/10.1021/acsomega.2c05234
+  pdf_preprint: 2022_Fibrous_Scaffold_Design
+  bibtex: |
+      @article{doi:10.1021/acsomega.2c05234,
+      author = {Parsons, Rio and Sestito, Jesse M. and Luke, Bethany S.},
+      title = {Computational Analysis and Optimization of Geometric Parameters for Fibrous Scaffold Design},
+      journal = {ACS Omega},
+      volume = {0},
+      number = {0},
+      pages = {null},
+      year = {0},
+      doi = {10.1021/acsomega.2c05234},
+      URL = {https://doi.org/10.1021/acsomega.2c05234},
+      eprint = {https://doi.org/10.1021/acsomega.2c05234}
+      }
+
+- title: Development of Aluminum Scandium Nitride Molecular Dynamics Force Fields with Scalable Multi-Objective Bayesian Optimization
+  type: Article
+  img: 2022_AlScN.png
+  description:
+  doi: 10.1007/s11837-022-05344-7
+  year: 2022
+  pdf: https://rdcu.be/cPgin
+  pdf_preprint: 
+  bibtex: |
+      @article{Sestito2022,
+      author = {Sestito, Jesse M and Kempner, Michaela and Harris, Tequila A L and Zarkadoula, E V A and Wang, Y A N},
+      doi = {10.1007/s11837-022-05344-7},
+      isbn = {1183702205344},
+      issn = {1543-1851},
+      journal = {JOM},
+      pages = {27--29},
+      publisher = {Springer US},
+      title = {{Development of Aluminum Scandium Nitride Molecular Dynamics Force Fields with Scalable Multi-Objective Bayesian Optimization}},
+      url = {https://doi.org/10.1007/s11837-022-05344-7},
+      year = {2022}
+      }
+
+- title: >
+    Reduced-order kinetic Monte Carlo model to simulate water diffusion in biodegradable polymers
+    <br>"Journal Cover"
+  type: Article
+  img: 2022_kMC_Diff.png
+  description:
+  doi: 10.1016/j.commatsci.2021.111141
+  year: 2022
+  pdf_preprint: 2021_kMC_Hydro
+  bibtex: |
+    @article{SESTITO2022111141,
+    title = {Reduced-order kinetic Monte Carlo model to simulate water diffusion in biodegradable polymers},
+    journal = {Computational Materials Science},
+    volume = {203},
+    pages = {111141},
+    year = {2022},
+    issn = {0927-0256},
+    doi = {https://doi.org/10.1016/j.commatsci.2021.111141},
+    url = {https://www.sciencedirect.com/science/article/pii/S092702562100803X},
+    author = {Jesse M. Sestito and Tequila A.L. Harris and Yan Wang},
+    keywords = {Kinetic Monte Carlo, Dimensionality reduction, Water diffusion, Biodegradable polymeric scaffold},
+    abstract = {Water is a driving factor in the degradation process of biodegradable polymers. However, water diffusion is typically not incorporated in the kinetic models of biodegradation such as kinetic Monte Carlo (kMC), because water diffusion events occur at a much shorter time scale than the hydrolysis reactions. As such, there is a need to improve the computational efficiency of water diffusion in the kMC models of diffusion processes in biodegradation. In this work, a new dimensionality reduction scheme for kMC diffusion models is developed to significantly reduce the computation time, where a two-dimensional kMC diffusion model for porous microstructures is reduced to one-dimensional ones. The dimensionality reduction is accomplished by calibrating the model parameters with multi-objective Bayesian optimization. The reduced-order diffusion model shows a 675-fold faster computation compared to the original two-dimensional model.}
+    }
+- title: Multiscale Process Modeling of Shape Memory Alloy Fabrication with Directed Energy Deposition
+  type: Book Chapter
+  img:
+  description:
+  doi: 10.1142/9789811222825_0003
+  year: 2021
+  pdf_preprint: 2021_NiTi_AMbookChapter_FinalManuscript
+  bibtex: |
+    @inbook{doi:10.1142/9789811222825_0003,
+    author = { Jesse M.   Sestito  and  Dehao   Liu  and  Yanglong   Lu  and  Ji-Hyeon   Song  and  Anh V.   Tran  and  Michael J.   Kempner  and  Tequila A. L.   Harris  and  Sung-Hoon   Ahn  and  Yan   Wang },
+    title = {Multiscale Process Modeling of Shape Memory Alloy Fabrication with Directed Energy Deposition},
+    booktitle = {Manufacturing in the Era of 4th Industrial Revolution},
+    chapter = {Chapter 3},
+    pages = {41-76},
+    doi = {10.1142/9789811222825_0003},
+    URL = {https://www.worldscientific.com/doi/abs/10.1142/9789811222825_0003},
+    eprint = {https://www.worldscientific.com/doi/pdf/10.1142/9789811222825_0003},
+    abstract = { The following sections are included: Introduction Property Calculation with MD Simulations Controlled Kinetic Monte Carlo as the Reduced-Order Model of DED Process Summary Acknowledgements References }
+    }
+- title: Coarse-Grained Force Field Calibration Based on Multiobjective Bayesian Optimization to Simulate Water Diffusion in Poly-ε-caprolactone
+  type: Article
+  img: 2020_MD_PCL.jpg
+  description: 
+  doi: 10.1021/acs.jpca.0c01939
+  year: 2020
+  pdf_preprint: 2020_MD_PCL
+  bibtex: |
+    @article{doi:10.1021/acs.jpca.0c01939,
+    author = {Sestito, Jesse M. and Thatcher, Mary L. and Shu, Leshi and Harris, Tequila A. L. and Wang, Yan},
+    title = {Coarse-Grained Force Field Calibration Based on Multiobjective Bayesian Optimization to Simulate Water Diffusion in Poly-ε-caprolactone},
+    journal = {The Journal of Physical Chemistry A},
+    volume = {124},
+    number = {24},
+    pages = {5042-5052},
+    year = {2020},
+    doi = {10.1021/acs.jpca.0c01939},
+    note = {PMID: 32452682},
+    URL = {https://doi.org/10.1021/acs.jpca.0c01939},
+    eprint = {https://doi.org/10.1021/acs.jpca.0c01939}
+    }
+- title: |
+    An atomistic simulation study of nanoscale sintering: The role of grain boundary misorientation
+  type: Article
+  img: 2019_sintering.jpg
+  description:
+  doi: 10.1016/j.commatsci.2019.04.015
+  year: 2019
+  pdf:
+  pdf_preprint: 2019_sintering_final
+  bibtex: |
+    @article{SESTITO2019180,
+    title = {An atomistic simulation study of nanoscale sintering: The role of grain boundary misorientation},
+    journal = {Computational Materials Science},
+    volume = {165},
+    pages = {180-189},
+    year = {2019},
+    issn = {0927-0256},
+    doi = {https://doi.org/10.1016/j.commatsci.2019.04.015},
+    url = {https://www.sciencedirect.com/science/article/pii/S0927025619302253},
+    author = {Jesse M. Sestito and Fadi Abdeljawad and Tequila A.L. Harris and Yan Wang and Allen Roach},
+    keywords = {Nanoscale sintering, Atomistic simulations, Grain boundary, Additive manufacturing},
+    abstract = {Sintering is a processing technique used to produce bulk materials from powder compacts. Recently, sintering has been the subject of active research for its relevance to a wide range of applications, such as additive manufacturing and fabrication of bulk nanocrystalline materials. Of particular interest is the role of grain boundaries (GBs) on sintering mechanisms, cooperative mass transport, and pore shrinkage rates. Herein, atomistic simulations are leveraged to investigate sintering kinetics and densification rates of nanoscale particles as a function of GB misorientation. The two-particle geometry is used to examine particle neck growth rates and crystallographic re-orientation events, and report relative GB diffusion rates as a function of GB misorientation. For the three-particle configuration, simulation results reveal a plethora of pore shrinkage profiles ranging from complete shrinkage to stagnant response depending on the GBs present in the system. This is the first atomistic study that systematically examines the role of GB misorientation on pore shrinkage rates. Our results highlight the need to revisit continuum sintering treatments in order to account for the anisotropy in GB properties.}
+    }

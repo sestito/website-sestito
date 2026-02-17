@@ -1,0 +1,43 @@
+---
+layout: nav_default
+title: 
+permalink: educational_resources
+---
+
+<section class="educational_resources">
+  <div class="container py-5">
+    <div class="row">
+      <div class="mx-auto">
+        <h1 class="section-heading text-center">Educational Resources</h1>
+ 
+      </div>
+    </div>
+  </div>
+
+  <div class="b-divider"></div>
+
+  {% for er in site.educational_resources %}
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row {% if er.imgleft != nil %}flex-lg-row-reverse{% else %}flex-lg-row{% endif %} align-items-center g-5 py-5">
+
+
+      <div class="col-lg-{% if er.img != nil %}8{% else %}10{% endif %}">
+        {{ er.content | markdownify }}
+
+      </div>
+
+      {% if er.img != nil %}
+      <div class="col-8 col-sm-6 col-lg-4">
+        <img src="{{ er.img }}" class="d-block mx-lg-auto img-fluid" alt {% if er.imgwidth != nil %}width="{{er.imgwidth}}"{% endif %} loading="lazy">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if er.borderafter != nil %}
+  <div class="b-divider"></div>
+  {% endif %}
+
+  {% endfor %}
+</section>

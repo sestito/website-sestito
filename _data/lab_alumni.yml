@@ -1,0 +1,22 @@
+- name: Trent Miller
+  img: TrentMiller.jpg
+  title: Pareto front quantification
+
+- name: Haoshen Yang
+  title: Bayesian optimization
+
+- name: Henry DeBruin
+  img: HenryDeBruin-Square.jpg
+  title: Engineering design optimization
+
+- name: Paul Sennyey
+  img: PaulSennyey-Square.jpg
+  title: Drone landing gear optimization
+
+- name: Andrew Oliger
+  img: AndrewOliger.jpg
+  title: Engineering visualization with fluids
+
+- name: Devin Glenn
+  title: Bioengineering manufacturing
+

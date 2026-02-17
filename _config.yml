@@ -1,0 +1,46 @@
+# Site Settings
+title: Sestito Engineering
+email: jesse.sestito@valpo.edu
+baseurl: ""
+url: "https://setito.github.io"
+
+include:
+  - _pages
+
+# Sass configuration - removed Windows-specific path
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  courses:
+    sort_by: last_year_taught
+    output: true
+  educational_resources:
+    sort_by: order
+  research_areas:
+    sort_by: order
+  research_projects:
+    sort_by: order
+  lab_fun:
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
+
+# Build settings
+plugins:
+  - jekyll-sass-converter
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .jekyll-cache

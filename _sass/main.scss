@@ -1,0 +1,27 @@
+@import "types/bootstrap_overwrite";
+
+@import "bootstrap";
+
+@import "types/nav";
+@import "types/publications";
+@import "types/hover";
+@import "types/people";
+@import "types/research";
+@import "types/overview";
+@import "types/courses";
+@import "types/educational_resources";
+/*@import "agency/styles";*/
+
+
+/* body {
+  font-size: 20px;
+} */
+
+.spacerDiv {
+  height: 40px;
+  width: 100%;
+}
+
+.row {
+  justify-content: space-evenly;
+}

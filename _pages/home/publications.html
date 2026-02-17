@@ -1,0 +1,115 @@
+
+<div class="card-deck py-5 bg-light publications">
+  
+  
+  <div class="container">
+    <div class="row">
+    <div class="text-center col-lg-12">
+      <h2 class="section-heading">Publications</h2>
+      <br><br>
+    </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+{% comment %}     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4"> {% endcomment %}
+
+    {% for pub in site.data.publications_card %}
+
+      <div class="col">
+        <div class="card h-100">
+
+{% comment %}           <div class="card-body">
+            <div class="clearfix">
+              <img src="/assets/publications/graphical_abstract/{{ pub.img }}"  class="col-md-6 float-md-end mb-3 ms-md-3" alt="Image Unavailable">
+
+              <p>
+                {{ pub.description }}
+              </p>
+            </div>
+          </div> {% endcomment %}
+
+          {% if pub.img != nil %}
+          <img src="/assets/publications/graphical_abstract/{{ pub.img }}"  class="card-img-top" alt="Image Unavailable">
+          {% endif %}
+
+          <div class="card-body">
+            <h6 class="card-title">{{ pub.title }}</h6>
+            {% comment %} <h5 class="card-title">{{ pub.name }}</h5> {% endcomment %}
+            
+            {% if pub.description != nil %}
+            <p class="card-text">{{ pub.description }}</p>
+            {% endif %}
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>{{ pub.type }}</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              {% if pub.year != nil %}
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">{{ pub.year }}</span>
+              </li>
+              {% endif %}
+
+              {% if pub.pdf != nil %} 
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="{{ pub.pdf }}" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+
+              {% elsif pub.pdf_preprint != nil %} 
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/{{ pub.pdf_preprint }}.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              {% endif %}
+
+
+              {% if pub.doi != nil %} 
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/{{ pub.doi }}" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              {% endif %}
+
+              {% if pub.github != nil %} 
+              <li data-bs-toggle="tooltip" title data-bs-original-title="GitHub" class="button-hover">
+                <a data-bs-container="body" href="https://github.com/{{ pub.github }}" target="_blank" >
+                  <i class="fab fa-github-alt"></i>
+                </a>
+              </li>
+              {% endif %}
+
+              {% if pub.bibtex != nil %} 
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>{{ pub.bibtex }}
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              {% endif %}
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+    </div>
+  </div>
+</div>

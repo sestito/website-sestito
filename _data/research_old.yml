@@ -1,0 +1,9 @@
+- md: optimization.md
+  data:
+    - md: optimization/methods.md
+    - md: optimization/app_generic.md
+    - md: optimization/app_md.md
+
+- md: visualization.md
+  data:
+    - md: visualization/viz_pareto_front.md

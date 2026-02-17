@@ -1,0 +1,37 @@
+<!-- Navigation -->
+<nav class="navbar sticky-top navbar-dark bg-dark" id="mainNav">
+    <div class="container">
+      <div class="max-width d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+        <a class="navbar-brand d-flex align-items-center" href="/{% if include.homeext != nil %}#{{ include.homeext }}{% endif %}" style="font-weight:bold;">{{ site.title }}</a>
+        
+
+        <ul class="nav col-12 col-lg-auto justify-content-center mb-md-0">
+            {% for item in site.data.homepages %}{% if item.id != nil %}
+            <li><a class="nav-link px-3 {% if item.end != nil %}{% endif %}" href="{% if page.url != "/" %}/{% endif %}#{{ item.id }}">{{ item.name }}</a></li>
+            {% endif %}{% endfor %}
+  
+        <!-- <li><a class="navbar-brand d-flex rBorder"></a></li> -->
+        </ul>
+
+  
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center mb-md-0">
+  
+          
+          {% for item in site.data.navigation %}
+          <li><a href="{{ item.link }}" class=" nav-link px-3 {% if page.url == item.link %}current{% endif %}">{{ item.name }}</a></li>
+          {% endfor %}
+
+  
+        </ul>
+        
+        <!-- <a class="navbar-brand rBorder col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"></a> -->
+        
+        <div class="text-end">
+          <a class="navbar-brand" href="https://www.linkedin.com/in/jesse-sestito-15b865a0/" target="_blank">Linked <i style="color: #009ff5;" class="fab fa-linkedin-in"></i></a>
+          <a class="navbar-brand" href="https://scholar.google.com/citations?user=qauoQhEAAAAJ&hl=en" target="_blank"><i style="color: #FFFFFF;" class="fas fa-graduation-cap"></i> Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </nav>

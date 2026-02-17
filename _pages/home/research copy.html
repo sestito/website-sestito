@@ -1,0 +1,46 @@
+
+
+<section class="container py-5">
+  <div class="row py-lg-5">
+    <div id="griddid" class="mx-auto">
+
+      <h1 class="section-heading text-center">Research</h1>
+
+      {% for section in site.data.research %}
+      
+
+      
+
+      <div class="py-4">
+
+
+        {% capture my_include %}{% include_relative /research/{{ section.md }} %}{% endcapture %}
+        {{ my_include | markdownify }}
+
+
+        {% if section.data != nil %}
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          {% for val in section.data %}
+          <div class="col">
+            <div class="well h-100">
+
+
+              {% capture my_include %}{% include_relative /research/{{ val.md }} %}{% endcapture %}
+              {{ my_include | markdownify }}
+
+
+            </div>
+
+          </div>
+          {% endfor %}
+        
+        </div>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

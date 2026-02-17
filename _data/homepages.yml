@@ -1,0 +1,16 @@
+- name: Overview
+  file: overview.html
+  id: 
+- name: Research
+  file: research.html
+  id: research
+- name: Publications
+  file: publications.html
+  id: publications
+- name: People
+  file: members.html
+  id: members
+- name: Courses
+  file: courses.html
+  id: courses
+  end: True

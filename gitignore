@@ -1,0 +1,32 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# Ruby
+*.gem
+*.rbc
+.rbenv-version
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Package lock files (optional - comment out if you want to commit them)
+# Gemfile.lock
+# package-lock.json

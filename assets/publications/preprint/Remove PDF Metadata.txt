@@ -1,0 +1,5 @@
+pdftk file.pdf  dump_data |sed -e 's/\(InfoValue:\)\s.*/\1\ /g' | pdftk file.pdf update_info - output file_no_meta.pdf
+exiftool -all:all= -overwrite_original file_no_meta.pdf
+pdfinfo file_no_meta.pdf
+
+Taken from https://stackoverflow.com/questions/60738960/remove-pdf-metadata-removing-complete-pdf-metadata
