@@ -1,14 +1,14 @@
 ---
 name: ME 364 - Vibrations
 school: Valparaiso University
-year: Spring 2024
+year: Spring 2024 - 2025
 description: |
     Fundamentals and principles of mechanical vibration. Mathematical formulation of the equations of motion for single and multi-degree of freedom systems. Analysis of natural frequency, damped natural frequency, free and forced vibration of mechanical systems
 img:
 type:
 github:
 homeext: courses
-last_year_taught: 2024-1
+last_year_taught: 2025-1
 not_live:
 ---
 

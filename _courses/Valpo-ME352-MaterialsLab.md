@@ -1,14 +1,14 @@
 ---
 name: ME 352 - Materials Science and Mechanics Laboratory
 school: Valparaiso University
-year: Fall 2021 - 2023
+year: Fall 2021 - 2025
 description: |
     Experimental studies design to reinforce theory presented in material science and mechanics of materials. Experiments deal with topics such as mechanical properties of materials, microstructures of materials, strain hardening, and hardness testing.
 img:
 type:
 github:
 homeext: courses
-last_year_taught: 2023-3
+last_year_taught: 2025-3
 not_live:
 ---
 

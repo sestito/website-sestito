@@ -1,14 +1,14 @@
 ---
 name: ME 354 - Mechanical Systems Laboratory
 school: Valparaiso University
-year: Spring 2023 - 2024
+year: Spring 2023 - 2026
 description: |
     The objective of this laboratory is to introduce mechanical engineering students to electric machines, mechanical vibrations, automatic control, and ABB industrial robot. This laboratory has a total of seven experiments (three in Vibrations, three in Automatic Control, and one in robotics).
 img:
 type:
 github:
 homeext: courses
-last_year_taught: 2024-1
+last_year_taught: 2026-1
 not_live:
 ---
 

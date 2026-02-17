@@ -1,14 +1,14 @@
 ---
 name: ME 355 - System Modeling and Numerical Methods
 school: Valparaiso University
-year: Fall 2021 - 2023
+year: Fall 2021 - 2025
 description: |
     This course provides instruction on the principles used to understand and model physical systems and introduces methods for building and solving mathematical models of engineering systems. Applications include the modeling of mechanical, thermal, biological and electrical systems and the use of numerical methods and computer programming to solve for the system outputs.
 img:
 type:
 github:
 homeext: courses
-last_year_taught: 2023-3
+last_year_taught: 2025-3
 not_live:
 ---
 

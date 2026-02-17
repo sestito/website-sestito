@@ -1,3 +1,22 @@
+- name: Adelle Holder
+  img: AdelleHolder-Square.png
+  title: Engineering design optimization
+
+- name: Alex Kagay
+  img: AlexKagay.jpg
+  title: Engineering design optimization
+  linkedin: https://www.linkedin.com/in/alex-kagay-122965223/
+
+- name: Sarah Iselin
+  img: SarahIselin-Square.jpg
+  title: 3D printing optimization
+  linkedin: http://linkedin.com/in/sarah-iselin-717772223
+
+- name: Kyle Morrison
+  img: KyleMorrison-Square.jpg
+  title: GUI design for engineers
+  linkedin: http://www.linkedin.com/in/kylemorrison03
+
 - name: Trent Miller
   img: TrentMiller.jpg
   title: Pareto front quantification

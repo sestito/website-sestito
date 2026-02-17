@@ -7,26 +7,25 @@
   github:
   googlescholar: https://scholar.google.com/citations?user=qauoQhEAAAAJ&hl=en
 
-- name: Adelle Holder
-  img: AdelleHolder-Square.png
-  title: Engineering design optimization
-
-- name: Alex Kagay
-  img: AlexKagay.jpg
-  title: Engineering design optimization
-  linkedin: https://www.linkedin.com/in/alex-kagay-122965223/
-
-- name: Sarah Iselin
-  img: SarahIselin-Square.jpg
-  title: 3D printing optimization
-  linkedin: http://linkedin.com/in/sarah-iselin-717772223
-
-- name: Kyle Morrison
-  img: KyleMorrison-Square.jpg
-  title: GUI design for engineers
-  linkedin: http://www.linkedin.com/in/kylemorrison03
-
 - name: Gavin Forck
   img: GavinForck-Square.png
   title: Finite Element Analysis Automation
   linkedin: www.linkedin.com/in/gavin-forck-44gf74291
+
+- name: Katie Bennett
+  title: Video Game Physical Therapy
+
+- name: Micah MacKay
+  title: Video Game Physical Therapy
+
+- name: Julianna De Simone
+  title: Video Game Physical Therapy  
+
+- name: Ian Bos
+  title: Volumetric Additive Manufacturing
+
+- name: Kyan Luckett
+  title: Volumetric Additive Manufacturing
+
+- name: Nate Peyer
+  title: Volumetric Additive Manufacturing
