@@ -1,0 +1,42 @@
+
+
+<section class="container py-5">
+  <div class="row py-lg-5">
+    <div id="griddid" class="mx-auto">
+
+      <h1 class="section-heading text-center">Research</h1>
+
+      {% for section in site.research_areas %}
+      
+
+      <div class="py-4">
+
+        {{ section.content | markdownify }}
+
+
+        {% if section.nochild != true %}
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          {% for val in site.research_projects %}
+          
+          {% if val.parent == section.title %}
+          <div class="col">
+            <div class="well h-100">
+
+              {{ val.content | markdownify }}
+
+            </div>
+
+          </div>
+          {% endif %}
+          {% endfor %}
+        
+        </div>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

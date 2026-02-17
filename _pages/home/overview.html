@@ -1,0 +1,14 @@
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row py-lg-5">
+      <div class="mx-auto overview">
+
+        {% capture my_include %}{% include_relative /home/extra/about.md %}{% endcapture %}
+        {{ my_include | markdownify }}
+
+      </div>
+      </div>
+  </div>
+</section>

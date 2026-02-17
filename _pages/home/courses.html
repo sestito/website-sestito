@@ -1,0 +1,92 @@
+
+<div class="card-deck py-5 bg-light courses">
+  
+  
+  <div class="container">
+    <div class="row">
+    <div class="text-center col-lg-12">
+      <h1 class="section-heading">Courses</h1>
+      <br><br>
+    </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
+
+    {% for course in site.courses reversed %}
+    {% if course.not_live == nil %}
+    
+      <div class="col">
+        <div class="card h-100">
+
+          {% if course.img != nil %}
+          <img src="/assets/publications/graphical_abstract/{{ course.img }}"  class="card-img-top" alt="Image Unavailable">
+          {% endif %}
+
+          <div class="card-body">
+            <h6 class="card-title">{{ course.name }}</h6>
+
+            {% if course.school != nil %}
+            <p class="card-text"><i>{{ course.school }}</i></p>
+            {% endif %}
+            
+            
+            {% if course.description != nil %}
+            <p class="card-text">{{ course.description }}</p>
+            {% endif %}
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            {% if course.type != nil %}<i>{{ course.type }}</i>{% endif %}
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="{{ course.url }}" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              {% if course.github != nil %} 
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Content on GitHub" class="button-hover">
+                <a data-bs-container="body" href="https://github.com/{{ course.github }}" target="_blank" >
+                  <i class="fab fa-github-alt"></i>
+                </a>
+              </li>
+              {% endif %}
+
+              {% if course.bibtex != nil %} 
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>{{ course.bibtex }}
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              {% endif %}
+
+
+              
+              {% if course.year != nil %}
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">{{ course.year }}</span>
+              </li>
+              {% endif %}
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>

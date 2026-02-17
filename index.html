@@ -1,0 +1,2169 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sestito Engineering</title>
+
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/academicons.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    
+    <!-- Bootstrap JS -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
+
+    <!-- Navigation -->
+<nav class="navbar sticky-top navbar-dark bg-dark" id="mainNav">
+    <div class="container">
+      <div class="max-width d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+        <a class="navbar-brand d-flex align-items-center" href="/#" style="font-weight:bold;">Sestito Engineering</a>
+        
+
+        <ul class="nav col-12 col-lg-auto justify-content-center mb-md-0">
+            
+            <li><a class="nav-link px-3 " href="#research">Research</a></li>
+            
+            <li><a class="nav-link px-3 " href="#publications">Publications</a></li>
+            
+            <li><a class="nav-link px-3 " href="#members">People</a></li>
+            
+            <li><a class="nav-link px-3 " href="#courses">Courses</a></li>
+            
+  
+        <!-- <li><a class="navbar-brand d-flex rBorder"></a></li> -->
+        </ul>
+
+  
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center mb-md-0">
+  
+          
+          
+          <li><a href="/lab_fun" class=" nav-link px-3 ">Lab Fun</a></li>
+          
+          <li><a href="/educational_resources" class=" nav-link px-3 ">Educational Resources</a></li>
+          
+
+  
+        </ul>
+        
+        <!-- <a class="navbar-brand rBorder col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"></a> -->
+        
+        <div class="text-end">
+          <a class="navbar-brand" href="https://www.linkedin.com/in/jesse-sestito-15b865a0/" target="_blank">Linked <i style="color: #009ff5;" class="fab fa-linkedin-in"></i></a>
+          <a class="navbar-brand" href="https://scholar.google.com/citations?user=qauoQhEAAAAJ&hl=en" target="_blank"><i style="color: #FFFFFF;" class="fas fa-graduation-cap"></i> Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row py-lg-5">
+      <div class="mx-auto overview">
+
+        
+        <p><br />
+<img src="/assets/images/misc/JSestito_Icon_big.png" alt="" style="width: 10rem; float: center; margin: 10px; min-width: 5rem; margin-left: auto; margin-right: auto; display: block;" />
+<br /></p>
+
+<h1 class="section-heading text-center" id="sestito-engineering-research-group">Sestito Engineering Research Group</h1>
+
+<p class="text-center"><br />
+We are a research group at <a href="https://www.valpo.edu/" title="Valpo" target="_blank">Valparaiso University</a>. Our goal is to develop computational tools and models and apply these to engineering applications.</p>
+
+
+      </div>
+      </div>
+  </div>
+</section>
+
+<div class="b-divider"></div>
+
+
+
+<div id="research"></div>
+
+
+
+
+
+<section class="container py-5">
+  <div class="row py-lg-5">
+    <div id="griddid" class="mx-auto">
+
+      <h1 class="section-heading text-center">Research</h1>
+
+      
+      
+
+      <div class="py-4">
+
+        <h2 class="section-heading" id="optimization">Optimization</h2>
+
+<p>Optimization is the method of optimizing a set of parameters, or input variables, such that a set of objectives, or output variables, are minimized (or maximized). In its simplest form, single objective optimization with one parameter can be represented as \(\min_{x} f(x)\). Our goal is then to find the value of \(x\) which minimizes \(f(x)\). If instead we wish to maximize \(f(x)\), we can just minimize \(-f(x)\). This is rather trivial to accomplish but becomes much more difficult as the number of parameters and objectives increase.</p>
+
+<figure class="img-cap image-center left" style="width:30%; min-width:15rem;">
+    <img src="/assets/images/research/pareto_front.png" alt="" class="img-responsive" />
+    
+</figure>
+
+<p>Multi-objective optimization is when the number of objectives is greater than one. For a set of parameters \(\boldsymbol{x} = (x_1, x_2, ... , x_m),\) the optimization problem can be represented as</p>
+
+<div>$$ 
+    \min_{\boldsymbol{x}} ( f_1(\boldsymbol{x} ), f_2(\boldsymbol{x}), ... , f_n(\boldsymbol{x}) ),
+$$</div>
+
+<p>where the goal is to minimize all of the objectives by modifying the parameters. In a theoretical sense, the ideal soltuion would be an \(\boldsymbol{x}\) which represents the absolute minimum for all objectives simultaneously. However, in a more traditional sense, selecting an \(\boldsymbol{x}\) which minimizes one objective does not minimize the other objectives. However, there are a set of solutions such that it is impossible to decrease the value of one objective by changing the value of \(\boldsymbol{x}\) without increasing the value of the other objectives. This set of solutions results in what is known as the Pareto front, which is a set of non-dominated solutions that for the minimum front of the objective space. This Pareto front holds the ideal solutions to the optimization problem in which a set of design variables should be selected for the desired minimum objectives.</p>
+
+<p>Now, how does this relate to engineering? When desiging parts your always trying to minimze and maximize attributes. Maybe you wish to minimize manufacturing costs and time while keeping with the original design of your product; you then can adjust the geometric design to minimize these two competing objectives. These optimization problems are all around us!</p>
+
+<p>Our goal is to find efficient and effective methods to calculate the pareto front for a large number of parameters and objectives. We also wish to explore optimization engineering problems and apply optimization methods to solve these engineering problems.</p>
+
+
+
+        
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          
+          
+          
+          <div class="col">
+            <div class="well h-100">
+
+              <h3 class="section-heading" id="developing-effective-high-parameter--high-objective-optimization-methods">Developing effective high-parameter / high-objective optimization methods</h3>
+
+<p>There is always interest in developing more efficient high-parameter and high-objective space optimization methods. Sometimes, we even try to push the limits into how many objectives can we optimize for? Projects in this lab include looking into new and exciting optimization methods that can be applied to optimization problems! Students will work to investigate and develop these methods!</p>
+
+
+            </div>
+
+          </div>
+          
+          
+          
+          
+          <div class="col">
+            <div class="well h-100">
+
+              <h3 class="section-heading" id="applications-of-multi-objective-optimization">Applications of multi-objective optimization</h3>
+
+<p>Though, we have looked into some applications of multi-objective optimization, there are always new an exciting engineering problems optimization can be applied to! Currently we are looking into design optimization problems for drone landing gear design and 3D printing optimization. We are always looking into new and exciting applications!</p>
+
+
+            </div>
+
+          </div>
+          
+          
+          
+          
+          
+        
+        </div>
+        
+
+      </div>
+      
+      
+
+      <div class="py-4">
+
+        <h2 class="section-heading" id="multiscale-modeling">Multiscale Modeling</h2>
+
+<p>In our lab, we utilize several multiscale modeling techniques to be able to analyze systems. In this lab we work with molecular dynamics, finite element analysis, kinetic Monte Carlo, and more!</p>
+
+
+
+        
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="col">
+            <div class="well h-100">
+
+              <h3 class="section-heading" id="application-molecular-dynamics-force-field-development">Application: molecular dynamics force field development</h3>
+
+<figure class="img-cap  left" style="width:33%; ">
+    <img src="/assets/images/research/Atoms_Visualization.png" alt="" class="img-responsive" />
+    
+</figure>
+
+<p>In molecular dynamics simulations, each particle, which can be an individual atom or a group of atoms, is modeled where the position and velocity of each particle is tracked. The positions of the atoms are deterimend by the simulations “Force Field”, which is the information that models the energy of each particle. So, to be able to perform these molecular dynamics simulations, we need force fields that accurately represent the system we are trying to model.</p>
+
+<p>To generate these molecular dynamics force fields, we use optimization to create force fields which acccurately represent the system we wish to model.</p>
+
+
+            </div>
+
+          </div>
+          
+          
+        
+        </div>
+        
+
+      </div>
+      
+      
+
+      <div class="py-4">
+
+        <h2 class="section-heading" id="undergraduate-projects">Undergraduate Projects</h2>
+
+<p>If you are an undergraduate at Valpo in engineering interested in research, there are projects in some of the following areas!</p>
+
+<ul>
+  <li>Optimization using Machine Learning: Learn how to apply machine learning methods to develop complex optimization algorithms for engineering design!</li>
+  <li>Molecular Dynamics: Explore materials science at an atomic level!</li>
+  <li>Finite Element Analysis: Learn how to programatically perform automated finite element analysis!</li>
+</ul>
+
+
+
+        
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        
+        </div>
+        
+
+      </div>
+      
+
+    </div>
+  </div>
+</section>
+
+<div class="b-divider"></div>
+
+
+
+<div id="publications"></div>
+
+
+
+
+<div class="card-deck py-5 bg-light publications">
+  
+  
+  <div class="container">
+    <div class="row">
+    <div class="text-center col-lg-12">
+      <h2 class="section-heading">Publications</h2>
+      <br><br>
+    </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+          <img src="/assets/publications/graphical_abstract/2024_Structural_Descriptor.png"  class="card-img-top" alt="Image Unavailable">
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Structural descriptor and surrogate modeling for design of biodegradable scaffolds</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2024</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2024_Structural_Descriptors.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/doi.org/10.1016/j.jmbbm.2024.106415" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{SESTITO2024106415,
+title = {Structural descriptor and surrogate modeling for design of biodegradable scaffolds},
+journal = {Journal of the Mechanical Behavior of Biomedical Materials},
+volume = {152},
+pages = {106415},
+year = {2024},
+issn = {1751-6161},
+doi = {https://doi.org/10.1016/j.jmbbm.2024.106415},
+url = {https://www.sciencedirect.com/science/article/pii/S175161612400047X},
+author = {Jesse M. Sestito and Tequila A.L. Harris and Yan Wang},
+keywords = {Structure-property relationship, Structural descriptor, Biodegradable scaffold, Kinetic Monte Carlo, Regenerative medicine},
+abstract = {Biodegradable scaffolds are important to regenerative medicine in that they provide an amicable environment for tissue regrowth. However, establishing structure-property (SP) relationships for scaffold design is challenging due to the complexity of the three-dimensional porous scaffold geometry. The complexity requires high-dimensional geometric descriptors. The training of such a SP surrogate model will need a large amount of experimental or simulation data. In this work, a schema of constructing SP relationship surrogates is developed to predict the degraded mechanical properties from the initial scaffold geometry. A new structure descriptor, the extended surfacelet transform (EST), is proposed to capture important details of pores associated with the degradation of scaffolds. The efficiency is further enhanced with principal component analysis to reduce the high-dimensional EST data into a low-dimensional representation. The schema also includes a kinetic Monte Carlo biodegradation model to simulate the biodegradation of polymer scaffolds and to generate the training data for the formation of SP relationships. The schema is demonstrated with the design of polycaprolactone biodegradable scaffolds by connecting the initial scaffold geometry to the degraded compressive modulus.}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Molecular dynamics simulations of cascade events in AlN</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2023</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2023_Cascade_AlN.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/doi.org/10.1016/j.rinma.2023.100383" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{KEMPNER2023100383,
+title = {Molecular dynamics simulations of cascade events in AlN},
+journal = {Results in Materials},
+pages = {100383},
+year = {2023},
+issn = {2590-048X},
+doi = {https://doi.org/10.1016/j.rinma.2023.100383},
+url = {https://www.sciencedirect.com/science/article/pii/S2590048X23000213},
+author = {Michaela Kempner and Jesse M. Sestito and Yan Wang and Eva Zarkadoula},
+keywords = {Molecular dynamics, Aluminum nitride, Radiation damage, Cascades},
+abstract = {The radiation tolerance and the ability to retain its piezoelectric response make aluminum nitride (AlN) a good candidate for emerging sensing technologies in nuclear reactor environments. Furthermore, it has been shown that doping the ceramic with additional metals can further improve the piezoelectric response. Fundamental understanding of the response of AlN to radiation is important for ultimately improving the material's properties. In this paper, we use molecular dynamics and a recently developed interatomic potential fitted to defect energies to investigate low energy collision cascades in AlN. We additionally investigate the electronic stopping effect in the damage production for 20 keV Al ions. Our results show that for all energies the number of Al surviving defects is larger than that of N defects. Additionally, we find that even though the ballistic energy loss is the dominating mechanism, it is important to take into account the electronic stopping in order not to overestimate the number of defects.}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+          <img src="/assets/publications/graphical_abstract/2022_BioScaffolds.jpeg"  class="card-img-top" alt="Image Unavailable">
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Computational Analysis and Optimization of Geometric Parameters for Fibrous Scaffold Design</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2022</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2022_Fibrous_Scaffold_Design.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/10.1021/acsomega.2c05234" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{doi:10.1021/acsomega.2c05234,
+author = {Parsons, Rio and Sestito, Jesse M. and Luke, Bethany S.},
+title = {Computational Analysis and Optimization of Geometric Parameters for Fibrous Scaffold Design},
+journal = {ACS Omega},
+volume = {0},
+number = {0},
+pages = {null},
+year = {0},
+doi = {10.1021/acsomega.2c05234},
+URL = {https://doi.org/10.1021/acsomega.2c05234},
+eprint = {https://doi.org/10.1021/acsomega.2c05234}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+          <img src="/assets/publications/graphical_abstract/2022_AlScN.png"  class="card-img-top" alt="Image Unavailable">
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Development of Aluminum Scandium Nitride Molecular Dynamics Force Fields with Scalable Multi-Objective Bayesian Optimization</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2022</span>
+              </li>
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="https://rdcu.be/cPgin" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/10.1007/s11837-022-05344-7" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{Sestito2022,
+author = {Sestito, Jesse M and Kempner, Michaela and Harris, Tequila A L and Zarkadoula, E V A and Wang, Y A N},
+doi = {10.1007/s11837-022-05344-7},
+isbn = {1183702205344},
+issn = {1543-1851},
+journal = {JOM},
+pages = {27--29},
+publisher = {Springer US},
+title = {{Development of Aluminum Scandium Nitride Molecular Dynamics Force Fields with Scalable Multi-Objective Bayesian Optimization}},
+url = {https://doi.org/10.1007/s11837-022-05344-7},
+year = {2022}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+          <img src="/assets/publications/graphical_abstract/2022_kMC_Diff.png"  class="card-img-top" alt="Image Unavailable">
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Reduced-order kinetic Monte Carlo model to simulate water diffusion in biodegradable polymers <br>"Journal Cover"
+</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2022</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2021_kMC_Hydro.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/10.1016/j.commatsci.2021.111141" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{SESTITO2022111141,
+title = {Reduced-order kinetic Monte Carlo model to simulate water diffusion in biodegradable polymers},
+journal = {Computational Materials Science},
+volume = {203},
+pages = {111141},
+year = {2022},
+issn = {0927-0256},
+doi = {https://doi.org/10.1016/j.commatsci.2021.111141},
+url = {https://www.sciencedirect.com/science/article/pii/S092702562100803X},
+author = {Jesse M. Sestito and Tequila A.L. Harris and Yan Wang},
+keywords = {Kinetic Monte Carlo, Dimensionality reduction, Water diffusion, Biodegradable polymeric scaffold},
+abstract = {Water is a driving factor in the degradation process of biodegradable polymers. However, water diffusion is typically not incorporated in the kinetic models of biodegradation such as kinetic Monte Carlo (kMC), because water diffusion events occur at a much shorter time scale than the hydrolysis reactions. As such, there is a need to improve the computational efficiency of water diffusion in the kMC models of diffusion processes in biodegradation. In this work, a new dimensionality reduction scheme for kMC diffusion models is developed to significantly reduce the computation time, where a two-dimensional kMC diffusion model for porous microstructures is reduced to one-dimensional ones. The dimensionality reduction is accomplished by calibrating the model parameters with multi-objective Bayesian optimization. The reduced-order diffusion model shows a 675-fold faster computation compared to the original two-dimensional model.}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Multiscale Process Modeling of Shape Memory Alloy Fabrication with Directed Energy Deposition</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Book Chapter</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2021</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2021_NiTi_AMbookChapter_FinalManuscript.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/10.1142/9789811222825_0003" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@inbook{doi:10.1142/9789811222825_0003,
+author = { Jesse M.   Sestito  and  Dehao   Liu  and  Yanglong   Lu  and  Ji-Hyeon   Song  and  Anh V.   Tran  and  Michael J.   Kempner  and  Tequila A. L.   Harris  and  Sung-Hoon   Ahn  and  Yan   Wang },
+title = {Multiscale Process Modeling of Shape Memory Alloy Fabrication with Directed Energy Deposition},
+booktitle = {Manufacturing in the Era of 4th Industrial Revolution},
+chapter = {Chapter 3},
+pages = {41-76},
+doi = {10.1142/9789811222825_0003},
+URL = {https://www.worldscientific.com/doi/abs/10.1142/9789811222825_0003},
+eprint = {https://www.worldscientific.com/doi/pdf/10.1142/9789811222825_0003},
+abstract = { The following sections are included: Introduction Property Calculation with MD Simulations Controlled Kinetic Monte Carlo as the Reduced-Order Model of DED Process Summary Acknowledgements References }
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+          <img src="/assets/publications/graphical_abstract/2020_MD_PCL.jpg"  class="card-img-top" alt="Image Unavailable">
+          
+
+          <div class="card-body">
+            <h6 class="card-title">Coarse-Grained Force Field Calibration Based on Multiobjective Bayesian Optimization to Simulate Water Diffusion in Poly-ε-caprolactone</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2020</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2020_MD_PCL.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/10.1021/acs.jpca.0c01939" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{doi:10.1021/acs.jpca.0c01939,
+author = {Sestito, Jesse M. and Thatcher, Mary L. and Shu, Leshi and Harris, Tequila A. L. and Wang, Yan},
+title = {Coarse-Grained Force Field Calibration Based on Multiobjective Bayesian Optimization to Simulate Water Diffusion in Poly-ε-caprolactone},
+journal = {The Journal of Physical Chemistry A},
+volume = {124},
+number = {24},
+pages = {5042-5052},
+year = {2020},
+doi = {10.1021/acs.jpca.0c01939},
+note = {PMID: 32452682},
+URL = {https://doi.org/10.1021/acs.jpca.0c01939},
+eprint = {https://doi.org/10.1021/acs.jpca.0c01939}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="col">
+        <div class="card h-100">
+
+
+
+          
+          <img src="/assets/publications/graphical_abstract/2019_sintering.jpg"  class="card-img-top" alt="Image Unavailable">
+          
+
+          <div class="card-body">
+            <h6 class="card-title">An atomistic simulation study of nanoscale sintering: The role of grain boundary misorientation
+</h6>
+            
+            
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            <i>Article</i>
+
+           
+
+            <ul class="link-buttons list-inline">
+
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="Year Published">
+                <span class="venue-shorthand">2019</span>
+              </li>
+              
+
+               
+
+              <li data-bs-toggle="tooltip" title data-bs-original-title="PDF" class="button-hover">
+                <a data-bs-container="body" href="/assets/publications/preprint/2019_sintering_final.pdf" target="_blank" >
+                  <i class="far fa-file-pdf"></i>
+                </a>
+              </li>
+              
+
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="DOI" class="button-hover">
+                <a data-bs-container="body" href="https://doi.org/10.1016/j.commatsci.2019.04.015" target="_blank" >
+                  <i class="bi bi-book"></i>
+                </a>
+              </li>
+              
+
+              
+
+               
+              <li data-bs-toggle="tooltip" title data-bs-original-title="BibTeX" class="button-hover">
+                <a tabindex="0" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="click" data-bs-placement="bottom" data-bs-html="true" data-bs-content="<pre>@article{SESTITO2019180,
+title = {An atomistic simulation study of nanoscale sintering: The role of grain boundary misorientation},
+journal = {Computational Materials Science},
+volume = {165},
+pages = {180-189},
+year = {2019},
+issn = {0927-0256},
+doi = {https://doi.org/10.1016/j.commatsci.2019.04.015},
+url = {https://www.sciencedirect.com/science/article/pii/S0927025619302253},
+author = {Jesse M. Sestito and Fadi Abdeljawad and Tequila A.L. Harris and Yan Wang and Allen Roach},
+keywords = {Nanoscale sintering, Atomistic simulations, Grain boundary, Additive manufacturing},
+abstract = {Sintering is a processing technique used to produce bulk materials from powder compacts. Recently, sintering has been the subject of active research for its relevance to a wide range of applications, such as additive manufacturing and fabrication of bulk nanocrystalline materials. Of particular interest is the role of grain boundaries (GBs) on sintering mechanisms, cooperative mass transport, and pore shrinkage rates. Herein, atomistic simulations are leveraged to investigate sintering kinetics and densification rates of nanoscale particles as a function of GB misorientation. The two-particle geometry is used to examine particle neck growth rates and crystallographic re-orientation events, and report relative GB diffusion rates as a function of GB misorientation. For the three-particle configuration, simulation results reveal a plethora of pore shrinkage profiles ranging from complete shrinkage to stagnant response depending on the GBs present in the system. This is the first atomistic study that systematically examines the role of GB misorientation on pore shrinkage rates. Our results highlight the need to revisit continuum sintering treatments in order to account for the anisotropy in GB properties.}
+}
+
+                  </pre>" data-original-title="" title="">
+                  <i class="bi bi-bookmark"></i>
+                </a>
+              </li>
+              
+
+
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    </div>
+  </div>
+</div>
+
+<div class="b-divider"></div>
+
+
+
+<div id="members"></div>
+
+
+
+
+
+<section class="people-background">
+  <div class="container py-5">
+    <div class="row">
+      <div class="mx-auto">
+        <h1 class="section-heading text-center">People</h1>
+        <br>
+
+        <p class="lead text-center">
+          If you are interested in joining, reach out to Jesse Sestito at <a href = "mailto: jesse.sestito@valpo.edu">jesse.sestito@valpo.edu</a>!
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Lab Members</h2>
+        <br><br>
+      </div>
+    </div>
+
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 row-cols-xl-6">
+  
+
+    <div class="team-member col">
+
+      <!-- Image of person -->
+      <a >
+        <img src="/assets/images/people/JSestito-Headshot-250px.png" class="img-responsive img-circle member-current" alt>
+      </a>
+
+      <!-- In line social buttons -->
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+        <li>
+          <a href="https://www.linkedin.com/in/jesse-sestito-15b865a0/" alt="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        
+
+        
+        <li>
+          <a href="https://scholar.google.com/citations?user=qauoQhEAAAAJ&hl=en" alt="graduation-cap">
+            <i class="fa fa-graduation-cap"></i>
+          </a>
+        </li>
+        
+
+        
+
+
+      </ul>
+
+      <!-- Name -->
+      <div class="name">Jesse Sestito</div>
+
+      <!-- Title -->
+      <div class="degree">Assistant Professor</div>
+
+      <!-- Fun -->
+      <div class="fun">Programming enthusiast</div>
+
+    </div>
+
+
+
+  
+
+    <div class="team-member col">
+
+      <!-- Image of person -->
+      <a >
+        <img src="/assets/images/people/AdelleHolder-Square.png" class="img-responsive img-circle member-current" alt>
+      </a>
+
+      <!-- In line social buttons -->
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <!-- Name -->
+      <div class="name">Adelle Holder</div>
+
+      <!-- Title -->
+      <div class="degree">Engineering design optimization</div>
+
+      <!-- Fun -->
+      <div class="fun"></div>
+
+    </div>
+
+
+
+  
+
+    <div class="team-member col">
+
+      <!-- Image of person -->
+      <a >
+        <img src="/assets/images/people/AlexKagay.jpg" class="img-responsive img-circle member-current" alt>
+      </a>
+
+      <!-- In line social buttons -->
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+        <li>
+          <a href="https://www.linkedin.com/in/alex-kagay-122965223/" alt="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <!-- Name -->
+      <div class="name">Alex Kagay</div>
+
+      <!-- Title -->
+      <div class="degree">Engineering design optimization</div>
+
+      <!-- Fun -->
+      <div class="fun"></div>
+
+    </div>
+
+
+
+  
+
+    <div class="team-member col">
+
+      <!-- Image of person -->
+      <a >
+        <img src="/assets/images/people/SarahIselin-Square.jpg" class="img-responsive img-circle member-current" alt>
+      </a>
+
+      <!-- In line social buttons -->
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+        <li>
+          <a href="http://linkedin.com/in/sarah-iselin-717772223" alt="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <!-- Name -->
+      <div class="name">Sarah Iselin</div>
+
+      <!-- Title -->
+      <div class="degree">3D printing optimization</div>
+
+      <!-- Fun -->
+      <div class="fun"></div>
+
+    </div>
+
+
+
+  
+
+    <div class="team-member col">
+
+      <!-- Image of person -->
+      <a >
+        <img src="/assets/images/people/KyleMorrison-Square.jpg" class="img-responsive img-circle member-current" alt>
+      </a>
+
+      <!-- In line social buttons -->
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+        <li>
+          <a href="http://www.linkedin.com/in/kylemorrison03" alt="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <!-- Name -->
+      <div class="name">Kyle Morrison</div>
+
+      <!-- Title -->
+      <div class="degree">GUI design for engineers</div>
+
+      <!-- Fun -->
+      <div class="fun"></div>
+
+    </div>
+
+
+
+  
+
+    <div class="team-member col">
+
+      <!-- Image of person -->
+      <a >
+        <img src="/assets/images/people/GavinForck-Square.png" class="img-responsive img-circle member-current" alt>
+      </a>
+
+      <!-- In line social buttons -->
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+        <li>
+          <a href="www.linkedin.com/in/gavin-forck-44gf74291" alt="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <!-- Name -->
+      <div class="name">Gavin Forck</div>
+
+      <!-- Title -->
+      <div class="degree">Finite Element Analysis Automation</div>
+
+      <!-- Fun -->
+      <div class="fun"></div>
+
+    </div>
+
+
+
+  
+  </div>
+
+
+  
+  <div class="container">
+
+
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Lab Alumni</h2>
+        <br><br>
+      </div>
+    </div>
+
+
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 row-cols-xl-6">
+  
+
+    <div class="team-member col">
+
+      <a >
+        <img src="/assets/images/people/TrentMiller.jpg" class="img-responsive img-circle member-alumni" alt>
+      </a>
+
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <div class="name">Trent Miller</div>
+
+      <div class="degree">Pareto front quantification</div>
+
+      <div class="fun"></div>
+
+    </div>
+
+  
+
+    <div class="team-member col">
+
+      <a >
+        <img src="/assets/images/people/blank-portrait.png" class="img-responsive img-circle member-alumni" alt>
+      </a>
+
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <div class="name">Haoshen Yang</div>
+
+      <div class="degree">Bayesian optimization</div>
+
+      <div class="fun"></div>
+
+    </div>
+
+  
+
+    <div class="team-member col">
+
+      <a >
+        <img src="/assets/images/people/HenryDeBruin-Square.jpg" class="img-responsive img-circle member-alumni" alt>
+      </a>
+
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <div class="name">Henry DeBruin</div>
+
+      <div class="degree">Engineering design optimization</div>
+
+      <div class="fun"></div>
+
+    </div>
+
+  
+
+    <div class="team-member col">
+
+      <a >
+        <img src="/assets/images/people/PaulSennyey-Square.jpg" class="img-responsive img-circle member-alumni" alt>
+      </a>
+
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <div class="name">Paul Sennyey</div>
+
+      <div class="degree">Drone landing gear optimization</div>
+
+      <div class="fun"></div>
+
+    </div>
+
+  
+
+    <div class="team-member col">
+
+      <a >
+        <img src="/assets/images/people/AndrewOliger.jpg" class="img-responsive img-circle member-alumni" alt>
+      </a>
+
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <div class="name">Andrew Oliger</div>
+
+      <div class="degree">Engineering visualization with fluids</div>
+
+      <div class="fun"></div>
+
+    </div>
+
+  
+
+    <div class="team-member col">
+
+      <a >
+        <img src="/assets/images/people/blank-portrait.png" class="img-responsive img-circle member-alumni" alt>
+      </a>
+
+      <ul class="list-inline social-buttons">
+
+        
+
+        
+
+        
+
+        
+
+
+      </ul>
+
+      <div class="name">Devin Glenn</div>
+
+      <div class="degree">Bioengineering manufacturing</div>
+
+      <div class="fun"></div>
+
+    </div>
+
+  
+  </div>
+
+  
+
+</section> 
+
+<div class="b-divider"></div>
+
+
+
+<div id="courses"></div>
+
+
+
+
+<div class="card-deck py-5 bg-light courses">
+  
+  
+  <div class="container">
+    <div class="row">
+    <div class="text-center col-lg-12">
+      <h1 class="section-heading">Courses</h1>
+      <br><br>
+    </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
+
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 364 - Vibrations</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">Fundamentals and principles of mechanical vibration. Mathematical formulation of the equations of motion for single and multi-degree of freedom systems. Analysis of natural frequency, damped natural frequency, free and forced vibration of mechanical systems
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME364_Vibrations.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2024</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 361 - Mechatronics Laboratory</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">This laboratory will introduce students to a variety of mechatronic components including microprocessors, PLCs, actuators, sensors, and robotics and allow students to program mechatronics systems to complete a variety of tasks.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME361_MechatronicsLaboratory.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2024</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 354 - Mechanical Systems Laboratory</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">The objective of this laboratory is to introduce mechanical engineering students to electric machines, mechanical vibrations, automatic control, and ABB industrial robot. This laboratory has a total of seven experiments (three in Vibrations, three in Automatic Control, and one in robotics).
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME354-MechanicalSystemsLab.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2023 - 2024</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 252 - Materials Science</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">The objective of this course is to provide the students with the basic principles of the materials science and engineering. Students will understand the structure of solids (including metals, ceramics, polymer and composite), imperfection of solids, diffusion, mechanical properties of materials, strengthening mechanisms and phase diagrams. Also, students will be aware that the selection of materials depending upon the physical, mechanical, and thermal properties required by the conditions associated with the engineering problems. These properties are controlled and affected by the composition, loading condition, and history (method of fabrication and/or environment) of the materials. 
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME252_MaterialsScience.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2023 - 2024</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 490-JS - Non-Traditional Manufacturing</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">Aspects of manufacturing that are not included in a traditional introduction manufacturing course. Topics range from non-traditional manufacturing methods to manufacturing concepts such as computer numeric control, product design management, and test engineering.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME490_Manufacturing.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2022, Fall 2023</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 355 - System Modeling and Numerical Methods</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">This course provides instruction on the principles used to understand and model physical systems and introduces methods for building and solving mathematical models of engineering systems. Applications include the modeling of mechanical, thermal, biological and electrical systems and the use of numerical methods and computer programming to solve for the system outputs.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME355.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Fall 2021 - 2023</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 352 - Materials Science and Mechanics Laboratory</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">Experimental studies design to reinforce theory presented in material science and mechanics of materials. Experiments deal with topics such as mechanical properties of materials, microstructures of materials, strain hardening, and hardness testing.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME352-MaterialsLab.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Fall 2021 - 2023</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 333 - Mechanical Measurements Laboratory</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">A study of fundamental concepts and physical principles involved in the science of measurement and design of experiments. Experiments involve calibration and testing (both static and dynamic) of primary elements, signal amplifiers, transducers and readout devices. Experimentation utilizes laboratory and industrial instruments.Extensive use is made of computer data acquisition and analysis. A Writing in the Discipline course.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME333L_MeasurementsLab.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Fall 2022</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 362 - Mechanisms</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">Graphical and analytical approaches to kinematic analysis and synthesis of linkages, gears, and cams. Linkage topics include displacement, velocity, and acceleration analysis along with type, number, and dimensional synthesis. Fundamentals of gears and gear trains are investigated. Cam sizing and application of motion programs to cam design are considered.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-ME362_Mechanism.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2022</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">GE 498 - Senior Design Project</h6>
+
+            
+            <p class="card-text"><i>Valparaiso University</i></p>
+            
+            
+            
+            
+            <p class="card-text">The application of theoretical and experimental engineering concepts in the analysis and design of an engineering system. Students form teams to plan and organize a multidisciplinary project. Projects are built, tested, documented, and reported.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/Valpo-GE498_SeniorDesign.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Spring 2022</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    
+    
+      <div class="col">
+        <div class="card h-100">
+
+          
+
+          <div class="card-body">
+            <h6 class="card-title">ME 2016 - Computing Techniques</h6>
+
+            
+            <p class="card-text"><i>Georgia Institute of Technology</i></p>
+            
+            
+            
+            
+            <p class="card-text">An introduction to numerical methods for the solution of mechanical engineering problems. Topics include: sources of errors in computing, mathematical bases of numerical methods, and implementation of numerical techniques using MATLAB.
+</p>
+            
+            
+
+          </div>
+
+          <div class="card-footer">
+            
+            
+
+           
+
+            <ul class="link-buttons list-inline">
+              
+              <li data-bs-toggle="tooltip" title data-bs-original-title="Course Homepage" class="button-hover">
+                <a data-bs-container="body" href="/courses/GT-ME2016.html" >
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+
+
+              
+
+              
+
+
+              
+              
+              <li data-bs-container="body" data-bs-toggle="tooltip" title data-bs-original-title="When Taught">
+                <span class="venue-shorthand">Fall 2019 - Spring 2021</span>
+              </li>
+              
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <script>
+      // Tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+
+      //Popovers
+
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+
+      //Popover focus (Will error)
+      //var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+      //  trigger: 'focus'
+      //})
+
+      
+
+
+    </script>
+  </body>
+</html>
