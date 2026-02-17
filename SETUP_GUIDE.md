@@ -15,29 +15,33 @@ This guide will walk you through setting up your Jekyll website with automatic d
 ### Step 1: Create Your New Repository
 
 1. Go to GitHub and create a new repository
-   - Name: `sestito-website` (or any name you prefer)
+   - Name: `website-sestito`
    - Make it **Public**
    - ✅ Check "Add a README file"
    - Click "Create repository"
 
 ### Step 2: Upload Your Files to the New Repository
 
-1. In your new `sestito-website` repository, click "Add file" → "Upload files"
+1. In your new `website-sestito` repository, click "Add file" → "Upload files"
 
 2. Upload ALL your Jekyll files EXCEPT these folders:
    - `_site/` (don't upload)
    - `.jekyll-cache/` (don't upload)
    - `node_modules/` (don't upload)
    - `vendor/` (don't upload)
+   - `package-lock.json` (don't upload)
 
 3. **Important files to upload:**
    - All your `_` folders (_courses, _includes, _layouts, _pages, etc.)
    - `assets/` folder
-   - The NEW files I created:
+   - The NEW files provided:
      - `_config.yml` (use the new version, not your old one)
-     - `Gemfile` (use the new version)
+     - `Gemfile` (use the new version - Bootstrap gem removed)
+     - `_sass/main.scss` (use the new version - Bootstrap import removed)
+     - `_layouts/default.html` (use the new version - Bootstrap CDN added)
+     - `_layouts/default-simple.html` (use the new version - Bootstrap CDN added)
      - `.gitignore`
-     - `.github/workflows/deploy.yml` (upload to `.github/workflows/` folder)
+     - `.github/workflows/deploy.yml` (create via Add file → Create new file, type `.github/workflows/deploy.yml` as the filename)
    - `favicon.ico`
    - Any HTML files in the root
 
@@ -45,17 +49,17 @@ This guide will walk you through setting up your Jekyll website with automatic d
 
 ### Step 3: Create the Dev Branch
 
-1. In your `sestito-website` repository, click the "main" dropdown (top left)
+1. In your `website-sestito` repository, click the "main" dropdown (top left)
 2. Type `dev` in the text box
 3. Click "Create branch: dev from main"
 
 Now you have two branches:
-- `main` = Production (deploys to setito.github.io)
+- `main` = Production (deploys to sestito.github.io)
 - `dev` = Development (deploys to preview site)
 
 ### Step 4: Create a Personal Access Token (for deployment)
 
-This allows GitHub Actions to push to your setito.github.io repository.
+This allows GitHub Actions to push to your sestito.github.io repository.
 
 1. Click your profile picture → Settings
 2. Scroll down to "Developer settings" (bottom left)
@@ -70,7 +74,7 @@ This allows GitHub Actions to push to your setito.github.io repository.
 
 ### Step 5: Add the Token to Your Repository
 
-1. Go to your `sestito-website` repository
+1. Go to your `website-sestito` repository
 2. Click "Settings" → "Secrets and variables" → "Actions"
 3. Click "New repository secret"
 4. Name: `DEPLOY_TOKEN`
@@ -79,23 +83,36 @@ This allows GitHub Actions to push to your setito.github.io repository.
 
 ### Step 6: Enable GitHub Pages for Preview
 
-1. Still in your `sestito-website` repository settings
+1. Still in your `website-sestito` repository settings
 2. Click "Pages" (left sidebar)
-3. Under "Source", select:
-   - Branch: `gh-pages`
-   - Folder: `/ (root)`
-4. Click "Save"
+3. Under "Source", select **"Deploy from a branch"**
+4. Set Branch to `gh-pages` and folder to `/ (root)`
+5. Click "Save"
 
-After a few minutes, your preview URL will appear here. It will be:
-`https://setito.github.io/sestito-website/`
+> **Note:** The `gh-pages` branch won't exist until after your first successful build on the `dev` branch. Complete Steps 7-8 first, make a commit to `dev`, wait for the build to finish, then come back and set this.
+
+After your first build completes, your preview URL will be:
+`https://sestito.github.io/website-sestito/`
 
 ### Step 7: Verify Your Live Site Repository
 
-1. Go to your `setito.github.io` repository
+1. Go to your `sestito.github.io` repository
 2. Settings → Pages
 3. Verify source is set to:
+   - **"Deploy from a branch"**
    - Branch: `main`
    - Folder: `/ (root)`
+
+### Step 8: Fix the deploy.yml Typo
+
+In your `website-sestito` repository, edit `.github/workflows/deploy.yml` and find:
+```yaml
+external_repository: sestito/sestito.github.io
+```
+Change it to:
+```yaml
+external_repository: sestito/sestito.github.io
+```
 
 ---
 
@@ -111,7 +128,7 @@ Edit on DEV branch → Test preview → Merge to MAIN → Live site updates
 
 #### 1. Make Changes on Dev Branch
 
-1. Go to your `sestito-website` repository
+1. Go to your `website-sestito` repository
 2. **Switch to `dev` branch** (dropdown at top left)
 3. Navigate to the file you want to edit
 4. Click the pencil icon ✏️ to edit
@@ -130,7 +147,7 @@ Edit on DEV branch → Test preview → Merge to MAIN → Live site updates
 
 #### 3. Test Your Preview
 
-1. Go to: `https://setito.github.io/sestito-website/`
+1. Go to: `https://sestito.github.io/website-sestito/`
 2. Check that your changes look correct
 3. Test all links and functionality
 
@@ -138,7 +155,7 @@ Edit on DEV branch → Test preview → Merge to MAIN → Live site updates
 
 Once you're happy with the preview:
 
-1. Go to your `sestito-website` repository
+1. Go to your `website-sestito` repository
 2. Click "Pull requests" → "New pull request"
 3. Set:
    - Base: `main`
@@ -152,7 +169,7 @@ Once you're happy with the preview:
 
 1. Go to "Actions" tab
 2. Wait for the workflow to complete ✅
-3. Visit your live site: `https://setito.github.io/`
+3. Visit your live site: `https://sestito.github.io/`
 4. Your changes are now live!
 
 ---
@@ -164,8 +181,8 @@ If you want to edit files on your computer:
 #### 1. Clone the Repository (One-time setup)
 
 ```bash
-git clone https://github.com/setito/sestito-website.git
-cd sestito-website
+git clone https://github.com/sestito/website-sestito.git
+cd website-sestito
 git checkout dev
 ```
 
@@ -256,15 +273,15 @@ Follow steps 2-5 from Option A above.
 
 1. Make sure you committed to the `dev` branch, not `main`
 2. Check Actions to see if the build completed
-3. The preview URL is: `https://setito.github.io/sestito-website/`
-   (Note the `/sestito-website/` at the end!)
+3. The preview URL is: `https://sestito.github.io/website-sestito/`
+   (Note the `/website-sestito/` at the end!)
 
 ### "404 - File not found" on Preview
 
 Your `_config.yml` needs a baseurl for the preview to work:
 
 1. Edit `_config.yml`
-2. Add this line: `baseurl: "/sestito-website"`
+2. Add this line: `baseurl: "/website-sestito"`
 3. Commit and rebuild
 4. Note: This might affect production! See "Advanced Tips" below.
 
@@ -278,7 +295,7 @@ If you need different settings for preview vs production (like baseurl):
 
 1. Create `_config_dev.yml`:
 ```yaml
-baseurl: "/sestito-website"
+baseurl: "/website-sestito"
 ```
 
 2. Update the workflow file to use both configs for dev builds
@@ -316,9 +333,15 @@ If you deployed something broken:
 ## Quick Reference
 
 ### URLs
-- **Preview site**: https://setito.github.io/sestito-website/
-- **Live site**: https://setito.github.io/
-- **Repository**: https://github.com/setito/sestito-website
+- **Preview site**: https://sestito.github.io/website-sestito/
+- **Live site**: https://sestito.github.io/
+- **Repository**: https://github.com/sestito/website-sestito
+
+### Two Repos - Different Pages Settings
+| Repo | Pages Source | URL |
+|---|---|---|
+| `website-sestito` | `gh-pages` branch | `sestito.github.io/website-sestito/` |
+| `sestito.github.io` | `main` branch | `sestito.github.io/` |
 
 ### Branches
 - **dev**: For testing changes (deploys to preview)
