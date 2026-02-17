@@ -7,7 +7,7 @@ url: "https://setito.github.io"
 include:
   - _pages
 
-# Sass configuration - removed Windows-specific path
+# Sass configuration - this tells Jekyll where to find Bootstrap gem files
 sass:
   sass_dir: _sass
   style: compressed

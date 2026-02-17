@@ -1,6 +1,7 @@
 @import "types/bootstrap_overwrite";
 
-@import "bootstrap";
+// Import Bootstrap from the gem - the gem provides this path
+@import "bootstrap/scss/bootstrap";
 
 @import "types/nav";
 @import "types/publications";
